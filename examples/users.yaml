@@ -1,0 +1,26 @@
+openapi: 3.0.3
+info:
+  title: Users Service
+  version: 1.0.0
+paths:
+  /health:
+    get:
+      summary: Users health
+      responses:
+        '200':
+          description: ok
+  /v1/users:
+    get:
+      summary: List users
+      responses:
+        '200':
+          description: ok
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+        email:
+          type: string
