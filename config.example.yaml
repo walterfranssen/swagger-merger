@@ -1,0 +1,14 @@
+openapi: 3.0.3
+info:
+  title: "Platform API"
+  version: "2026.03"
+servers:
+  - url: https://api.example.com
+http_timeout_seconds: 20
+services:
+  - name: users
+    source: ./examples/users.yaml
+    path_prefix: /users
+  - name: billing
+    source: https://billing.example.com/openapi.yaml
+    path_prefix: /billing
